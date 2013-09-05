@@ -45,8 +45,16 @@
 		}
 	},
     watch: {
-      files: ['<%= jshint.files %>'],
-      tasks: ['jshint']
+      scripts:{
+        files: ['coffee/src/*.coffee'],
+        tasks: ['coffee'],
+        options: {
+           dateFormat: function(time) {
+            grunt.log.writeln('The watch finished in ' + time + 'ms at' + (new Date()).toString());
+            grunt.log.writeln('Waiting for more changes...');
+          }
+        }
+      }
     }
   });
 
@@ -58,7 +66,7 @@
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
   grunt.registerTask('default', ['jshint', 'concat', 'uglify','coffee']);
-  grunt.registerTask('runcoffee', ['coffee']);//warn:任务名不能和后面的某个名字一致，如不能叫coffee
+  //grunt.registerTask('runcoffee', ['coffee']);//warn:任务名不能和后面的某个名字一致，如不能叫coffee.因为默认注册了
 
 
 };
