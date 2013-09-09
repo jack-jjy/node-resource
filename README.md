@@ -30,6 +30,7 @@
     
 
 ### 基础拓展
+* [lodash](http://lodash.com/) javascript帮助库。重写本地低效的api。貌似优于underscore。
 * [underscore](https://github.com/jashkenas/underscore) javascript帮助库 
 * [moment](http://momentjs.com/) 时间操作
 
@@ -65,3 +66,7 @@
 * [anywhere](https://npmjs.org/package/anywhere) 可以在任意文件目录构建静态服务器 
 * [node-exif](https://github.com/gomfunkel/node-exif) 读取图片的元信息 (很多读图片元信息的node库需要安装一些软件，这个不用)
 
+
+### 更多node库的整理
+* [jster](http://jster.net/)
+* [joyent-nodeModules](https://github.com/joyent/node/wiki/Modules)

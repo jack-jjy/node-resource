@@ -3,6 +3,9 @@
 ###############
 mongoDB/node_modules
 nodeTest/node_modules
+grunt/node_modules
+orderMealSystem/node_modules
+
 
 
 ###############
