@@ -9,7 +9,12 @@
 
 ### web 
 * [express](https://github.com/visionmedia/express) web开发框架
+* [express-group-handlers](https://github.com/louischatriot/express-group-handlers) 路由的aop，比如希望在访问某些路由之前做一些其他操作（登陆等）
+
+* [passport](https://github.com/jaredhanson/passport) 验证用户的express中间件
+
 * [ejs](https://github.com/visionmedia/ejs) 页面模板。可以方便的把html改写成ejs。
+* [express-partials](https://github.com/publicclass/express-partials) 让Express 3.x 支持ejs的layout(<%- body %>)
 * [eco](https://github.com/sstephenson/eco) 页面模板,类似ejs。与ejs的不同点是：逻辑部分用CoffeeScript而不是javascript 
 * [jade](https://github.com/visionmedia/jade) 页面模板 源自ruby的[haml](http://haml.info/) 比ejs优雅简洁，但把html转换成jade要花一番功夫。 
 * [coffeecup](https://github.com/gradus/coffeecup) 页面模板 风格有些像 jade,但里面的内容各种用coffee。    
@@ -21,7 +26,10 @@
       
 * [cheerio](https://github.com/MatthewMueller/cheerio) 解析html文档。解析的结果可以用jQuery的写法来筛选想要的dom元素。
 * [JSDOM](https://github.com/tmpvar/jsdom) 和cheerio类似。但更强大。但要在windows安装是各种麻烦。
-* [nodegrass](https://github.com/scottkiss/nodegrass) 抓取某地址的页面    
+* [nodegrass](https://github.com/scottkiss/nodegrass) 抓取某地址的页面  
+
+* [path](https://npmjs.org/package/path) 文件路径操作  
+
       
 * [docpad](http://docpad.org/) 静态站点生成系统，一般是用来做博客
 * [wintersmith](https://github.com/jnordberg/wintersmith) 同上    
@@ -48,6 +56,7 @@
 * [expect.js](https://github.com/LearnBoost/expect.js) 断言库。可读性很强，在should.js基础上构建。    
     
 * [zombie.js](http://zombie.labnotes.org/) 构造浏览器进行测试(headless browser)
+* [phantomjs](http://phantomjs.org/) 无头的webkit
 * [uiTest](https://npmjs.org/package/uitest) 前端UI测试框架  
 
 
