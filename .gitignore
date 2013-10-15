@@ -1,12 +1,7 @@
 ###############
 #    folder   #
 ###############
-#mongoDB/node_modules
-#nodeTest/node_modules
-#grunt/node_modules
-#unitTest/node_modules
-#orderMealSystem/node_modules
-
+# ignore不管在哪个子项目下的node_modules下的node_modules
 */node_modules
 
 
