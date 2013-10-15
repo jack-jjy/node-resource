@@ -2,8 +2,8 @@
 #    folder   #
 ###############
 node_modules
-dest
-coffee/dest
+src/scripts/dest
+dest/
 
 
 
