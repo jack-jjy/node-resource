@@ -1,10 +1,13 @@
 ###############
 #    folder   #
 ###############
-mongoDB/node_modules
-nodeTest/node_modules
-grunt/node_modules
-orderMealSystem/node_modules
+#mongoDB/node_modules
+#nodeTest/node_modules
+#grunt/node_modules
+#unitTest/node_modules
+#orderMealSystem/node_modules
+
+*/node_modules
 
 
 
