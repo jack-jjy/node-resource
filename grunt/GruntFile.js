@@ -1,26 +1,56 @@
 ﻿module.exports = function(grunt) {
-  var jsFiles = "src/*.js",
-	coffeeFiles = "src/*.coffee",
-	coffeeDest = "coffee/dest/";
+  var jsFiles = "src/scripts/**/*.js",
+    cssFiles = "src/styles/**/*.css",
+	coffeeFiles = "**/*.coffee",
+	coffeeDest = "src/scripts/dest";
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+     clean: {
+          dist: [
+              '<%= concat.distjs.dest %>',
+              '<%= concat.distcss.dest %>',
+              '<%= cssmin.dist.dest %>',
+              '<%= uglify.dist.dest %>'
+          ],
+          server: ['.tmp']
+      },
     concat: {
       options: {
-        separator: '/*file end*/;'
+        //separator: '/*file end*/;',
+        process: function(src, filepath) {
+             if(/css$|js$/.test(filepath)){
+                return '\n/* Source: ' + filepath + ' */\n' +   //文件前面加文件名
+                    src + '\n/* Source: ' + filepath + ' end */\n';
+            }else{
+                return src;
+            }
+        }
       },
-      dist: {
+      distjs: {
         src: [jsFiles],
         dest: 'dest/app.js'
-      }
+      },
+      distcss: {
+        src: [cssFiles],
+        dest: 'dest/app.css'
+      },
     },
     uglify: {
       options: {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
       },
-      dist: {
-        files: {
-          'dest/app.min.js': ['<%= concat.dist.dest %>']
-        }
+      dist:{
+        src:'<%= concat.distjs.dest %>',
+        dest: 'dest/app.min.js'
+      }
+    },
+    cssmin:{
+      options: {
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+      },
+      dist:{
+        src:'<%= concat.distcss.dest %>',
+        dest: 'dest/app.min.css'
       }
     },
     jshint: {
@@ -37,7 +67,7 @@
 	coffee:{
 		dist:{
 			expand: true, 
-			cwd: "coffee/",
+			cwd: "src/scripts/coffee",
 			src: [coffeeFiles],
 			dest: coffeeDest,
 			//flatten:true,若为true,没有层次结构~
@@ -64,8 +94,9 @@
   grunt.loadNpmTasks('grunt-contrib-concat'); */
   //loadTask so easy ~
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-
-  grunt.registerTask('default', ['jshint', 'concat', 'uglify','coffee']);
+  grunt.registerTask('develop',['clean','jshint', 'coffee','concat']);//开发时不压缩
+  grunt.registerTask('min',['uglify','cssmin']);
+  grunt.registerTask('default', ['develop','min']);
   //grunt.registerTask('runcoffee', ['coffee']);//warn:任务名不能和后面的某个名字一致，如不能叫coffee.因为默认注册了
 
 
