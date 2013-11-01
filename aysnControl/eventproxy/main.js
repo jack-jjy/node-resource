@@ -75,6 +75,8 @@ var EventProxy = require('eventproxy');
     runId =  setInterval(function(){
         if(i++ < times){
          ep.emit('data',i);
+        }else{
+            clearInterval(runId);
         }
     },10);
     
