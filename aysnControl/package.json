@@ -1,0 +1,14 @@
+{
+  "name": "aysn_control",
+  "version": "0.0.0",
+  "description": "解决多个异步嵌套深，不易阅读的解决方案尝试",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD",
+  "devDependencies": {
+    "eventproxy": "~0.2.6"
+  }
+}
