@@ -1,11 +1,15 @@
 var http = require('http');
 var fs = require('fs');
 
-var url = 'http://nodejs.org/images/logo-light.png';
-download(url);
+//var url = 'http://img01.taobaocdn.com/L1/142/403874156/modules/tshop-um-itemsa/assets/images/zz1.png';
+//download(url);
 function download(url){
     var downloadPath = 'download/';
-    var fileName = (new Date()).getTime() + '.' +/[\s\S]+\.(\w+)$/.exec(url)[1]; //时间戳 + 图片后缀
+    var postfix = 'jpg';
+    if(/[\s\S]+\.(jpg|png)$/.exec(url)){
+        postfix = /[\s\S]+\.(jpg|png)$/.exec(url)[1];
+    }
+    var fileName = (new Date()).getTime() + '.' + postfix; //时间戳 + 图片后缀
     var isDownloadFoldExist = fs.existsSync(downloadPath);
     if(!isDownloadFoldExist){
         fs.mkdirSync(downloadPath);
