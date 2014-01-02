@@ -9,5 +9,14 @@
 * [node书籍](https://github.com/iamjoel/nodeTest/wiki/node-book)
 * [node网站](https://github.com/iamjoel/nodeTest/wiki/node-bookmark)
 
+## npm
+最近npm很慢啊，可以用[cnpm](http://cnpmjs.org/)。    
+安装,使用cnpm。
+```
+npm install cnpm -g
+cnpm install [name]
+```
+
+
 
 
