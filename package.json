@@ -1,0 +1,27 @@
+{
+  "name": "node-test",
+  "version": "0.0.0",
+  "description": "test node",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha -R Spec test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iamjoel/nodeTest.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/iamjoel/nodeTest/issues"
+  },
+  "devDependencies": {
+    "should": "~3.1.2"
+  },
+  "dependencies": {
+    "lodash": "~2.4.1"
+  }
+}
