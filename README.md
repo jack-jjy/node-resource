@@ -1,4 +1,4 @@
-#学习[nodeJS](http://nodejs.org/)的Demos
+#学习[nodeJS](http://nodejs.org/)的Demos [![Build Status](https://travis-ci.org/iamjoel/node-test.png)](https://travis-ci.org/iamjoel/node-test/)
 
 ## node资料
 * [node api](http://nodejs.org/api/)
