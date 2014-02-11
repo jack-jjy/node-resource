@@ -17,6 +17,10 @@ npm install cnpm -g
 cnpm install [name]
 ```
 
+## 查看该项目的测试覆盖率
+`mocha --require blanket -R html-cov > coverage.html`    
+ps : 只统计了libs文件夹下的代码覆盖率
+
 
 
 
