@@ -1,0 +1,14 @@
+{
+  "name": "redis-simple",
+  "version": "0.0.0",
+  "description": "",
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "devDependencies": {},
+  "dependencies": {
+    "redis": "~0.10.0",
+    "moment": "~2.5.1",
+    "lodash": "~2.4.1"
+  }
+}
