@@ -29,9 +29,9 @@ function statisticsOnlineNum (timestr, callback) {
 */
 function statisticsRetentionNum (timestr, callback) {
     var key = consts.ONLINE_KEY.replace('{timestr}', timestr);
-    var nextDayStr = tools.getNextDayStr(timestr);
-    var nextDayKey = consts.OFFLINE_KEY.replace('{timestr}', nextDayStr);
-    client.sinter(key, nextDayKey, function(err, users) {
+    var prevDayStr = tools.getPrevDayStr(timestr);
+    var prevDayKey = consts.OFFLINE_KEY.replace('{timestr}', prevDayStr);
+    client.sinter(key, prevDayKey, function(err, users) {
         if(!err){
             num = users.length;
             console.info('[statisticsRetentionNum]  timestr:%s retention number %s', 

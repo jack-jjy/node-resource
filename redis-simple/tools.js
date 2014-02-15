@@ -1,7 +1,7 @@
 var consts = require('./consts');
 var moment = require('moment');
-function getNextDayStr(timeStr){
-   var nextDay = moment(timeStr).add('day', 1);
+function getPrevDayStr(timeStr){
+   var nextDay = moment(timeStr).add('day', -1);
    return nextDay.format(consts.DAY_FORMAT); 
 }
 
@@ -11,6 +11,6 @@ function formatTime(time){
 }
 
 module.exports = {
-    getNextDayStr : getNextDayStr
+    getPrevDayStr : getPrevDayStr
     , formatTime : formatTime
 };
