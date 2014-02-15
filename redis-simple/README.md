@@ -1,4 +1,4 @@
-## http://iamjoel.github.io/2014/02/15/redis-demo1/ 的demo
+## http://iamjoel.github.io/2014/02/15/redis-demo1/ 的源码
 ### 使用redis来完成如下功能
 1. 统计某天的上线人数
 1. 统计用户一日的流失(下线后，第二天未上线的)
